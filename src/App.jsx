@@ -1,4 +1,9 @@
 import { BiTrendingUp } from "react-icons/bi";
+import binanceIcon from "./assets/Binance-Coin.svg";
+import bitcoinIcon from "./assets/Bitcoin-SV.svg";
+import ethereumIcon from "./assets/Ethereum.svg";
+import shibaIcon from "./assets/SHIBA-INU.svg";
+import solanaIcon from "./assets/Solana.svg";
 
 function App() {
   return (
@@ -7,6 +12,8 @@ function App() {
         <BiTrendingUp color="#DC1FFF" />
         <span className="text-white">Trending Assets</span>
       </div>
+
+      {/* <div className="flex gap-2"></div> */}
     </div>
   );
 }
