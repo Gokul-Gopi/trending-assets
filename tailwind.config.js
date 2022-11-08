@@ -7,12 +7,20 @@ module.exports = {
     },
     colors: {
       background: "rgb(20 23 43)",
+      card: "#1c1f34",
     },
     textColor: {
       white: "#fff",
+      grey: "#737BAE",
+      darkGrey: "#5A5F7D",
+      incPercentage: "#00FFA3",
     },
-
-    extend: {},
+    extend: {
+      spacing: {
+        24: "6rem",
+        "15px": "15px",
+      },
+    },
   },
 
   plugins: [],
