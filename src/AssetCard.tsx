@@ -3,10 +3,10 @@ import React from "react";
 interface IAssetCard {
   icon: string;
   name: string;
-  price: number;
+  price: string;
   percentageChangeInPrice: number;
-  TVL: number;
-  popularPairings: [string];
+  TVL: string;
+  popularPairings: string[];
 }
 
 export const AssetCard = ({
@@ -27,8 +27,17 @@ export const AssetCard = ({
         <p className="text-grey font-bold text-xs">{name}</p>
         <p className="relative bg-background text-white text-center px-4 py-2 w-[85%] rounded-2xl ">
           ${price}{" "}
-          <span className="absolute right-8 top-1/2 -translate-y-1/2 text-incPercentage text-xs">
-            {percentageChangeInPrice}
+          <span
+            className={`
+              absolute right-8 top-1/2 -translate-y-1/2 text-xs +
+              ${
+                percentageChangeInPrice > 0
+                  ? "text-incPercentage"
+                  : "text-[red]"
+              }
+            `}
+          >
+            {percentageChangeInPrice}%
           </span>
         </p>
         <p className="text-darkGrey font-bold text-xs">{TVL}</p>
